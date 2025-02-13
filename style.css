@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #0d0475;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#image-container {
+    margin-top: 20px; 
+}
+
+#question {
+    font-family: 'Sacramento', cursive, sans-serif;
+    font-size: 52px;
+    color: white;
+    margin-bottom: 20px; 
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 26px;
+    font-family: 'Sacramento', cursive, sans-serif; 
+    background-color: #d74b67;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button:hover {
+    background-color: #f28e92; 
+    transform: scale(1.1); 
+}
+
+button:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7); 
+}
+
+/* Importing Sacramento font */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
