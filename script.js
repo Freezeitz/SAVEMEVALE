@@ -47,7 +47,7 @@ function showSlayyyy() {
 function displayHamster() {
     var imageContainer = document.getElementById('image-container');
     var hamsterImage = new Image();
-    hamsterImage.src = 'hamster.gif'; 
+    hamsterImage.src = 'hamster.gif.gif'; 
     hamsterImage.alt = 'hamster';
     hamsterImage.onload = function() {
         imageContainer.appendChild(hamsterImage);
