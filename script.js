@@ -47,10 +47,16 @@ function showSlayyyy() {
 function displayHamster() {
     var imageContainer = document.getElementById('image-container');
     var hamsterImage = new Image();
-    hamsterImage.src = 'hamster.gif.gif'; 
+    hamsterImage.src = 'hamster.gif';  // Correct file name (should be a valid file)
     hamsterImage.alt = 'hamster';
+    
     hamsterImage.onload = function() {
         imageContainer.appendChild(hamsterImage);
+    };
+
+    hamsterImage.onerror = function() {
+        console.error("Hamster image not found!");
+        alert('Hamster image failed to load!');
     };
 }
 
@@ -60,10 +66,16 @@ function displayDhanbi() {
     var dhanbiImage = new Image();
     dhanbiImage.src = 'dhanbi.gif'; 
     dhanbiImage.alt = 'dhanbi';
+    
     dhanbiImage.onload = function() {
         imageContainer.appendChild(dhanbiImage);
         document.getElementById('options').style.display = 'none';
     };
+    dhanbiImage.onerror = function() {
+        console.error("Dhanbi image not found!");
+        alert('Dhanbi image failed to load!');
+    };
 }
 
-displayHamster(); // Initially display hamster
+// Initial hamster display call
+displayHamster(); 
