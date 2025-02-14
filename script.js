@@ -3,6 +3,7 @@ function selectOption(option) {
         flashColors(function() {
             document.getElementById('question').style.display = 'none'; 
             displayDhanbi(); 
+            showSlayyyy(); // Call showSlayyyy after displayDhanbi
         });
     } else if (option === 'no') {
         document.getElementById('no-button').innerText = 'You sure?'; 
@@ -22,11 +23,12 @@ function flashColors(callback) {
         document.body.style.backgroundColor = colors[i];
         i = (i + 1) % colors.length;
     }, 200); 
+
     setTimeout(function() {
         clearInterval(interval);
         document.body.style.backgroundColor = ''; 
         if (callback) {
-            callback();
+            callback(); // Ensure the callback (showSlayyyy) is executed after color flashing
         }
     }, 2000); 
 }
@@ -63,4 +65,5 @@ function displayDhanbi() {
         document.getElementById('options').style.display = 'none';
     };
 }
-displayHamster();
+
+displayHamster(); // Initially display hamster
